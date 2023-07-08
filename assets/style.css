@@ -1,0 +1,56 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 0%, rgba(20,196,232,1) 97%);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .countdown {
+    font-size: 60px;
+    font-weight: bold;
+    animation: countdownAnimation 1s ease-in-out infinite;
+    -webkit-animation: countdownAnimation 1s ease-in-out infinite;
+    color: white;
+}
+  
+  @keyframes countdownAnimation {
+    0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+}
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .hidden {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    display: none;
+    animation: showMessageAnimation 1s ease-in-out forwards;
+    -webkit-animation: showMessageAnimation 1s ease-in-out forwards;
+}
+  
+  @keyframes showMessageAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
